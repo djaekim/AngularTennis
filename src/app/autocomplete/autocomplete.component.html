@@ -1,0 +1,7 @@
+<div>
+  <input type="text" class='form-group' style='width:50%' (keyup)="onType(inputVal)" #inputVal placeholder="please enter name">
+
+  <ul class="list-group" *ngIf="User">
+    <li (click)="onClick(ele)" class="list-group-item" style='width:50%; margin:0 auto;cursor:pointer' *ngFor="let ele of filtered" > {{ele.name}} </li>
+  </ul>
+</div>

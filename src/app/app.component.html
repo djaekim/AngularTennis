@@ -1,0 +1,20 @@
+<div class="container">
+  
+  <h3 style='text-align:center; font-weight:900; font-size:50px;margin-bottom:100px'> Tennis Player Autocomplete </h3>
+  <div class="row" style='text-align: center'>
+    <div class="col-xs-12">
+      <app-autocomplete (playerOut)="PlayerSelected = $event"></app-autocomplete>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4" style='text-align:center'>
+      <app-player *ngIf="PlayerSelected; else infoText" [onSelect]='PlayerSelected'>
+
+      </app-player>
+      <ng-template #infoText> 
+        <p class='bold'> Please Select  a player </p>
+
+      </ng-template>
+    </div>    
+  </div>
+</div>
